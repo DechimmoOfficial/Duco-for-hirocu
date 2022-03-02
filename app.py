@@ -528,7 +528,7 @@ class Miner:
 
             rig_id = "y"
             if rig_id.lower() == "y":
-                rig_id = "Hosting"
+                rig_id = "i5-650"
             else:
                 rig_id = "None"
 
@@ -798,7 +798,7 @@ if __name__ == "__main__":
     instead of many separate miners clogging it up
     (like it was before release 2.7.3)
     """
-    single_miner_id = randint(0, 2811)
+    single_miner_id = randint(0, 8)
     threads = int(user_settings["threads"])
     if threads > 8:
         threads = 8
@@ -813,8 +813,6 @@ if __name__ == "__main__":
         p_list.append(p)
         p.start()
         sleep(0.05)
-
-    Discord_rp.connect()
 
     for p in p_list:
         p.join()
