@@ -35,7 +35,7 @@ if not Path('Setting/settings.cfg').is_file():
     #if identifier == 0:
      #   identifier = str('Arduino')
     config['Setting']={'usernames':'dechimmo1official',
-                       'threads':'6',
+                       'threads':'24',
                         'identifier':'Arduino'
                         }
 
