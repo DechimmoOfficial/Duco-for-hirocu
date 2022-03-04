@@ -528,7 +528,7 @@ class Miner:
 
             rig_id = "y"
             if rig_id.lower() == "y":
-                rig_id = "i5-650"
+                rig_id = "xeon e5-2620v3"
             else:
                 rig_id = "None"
 
