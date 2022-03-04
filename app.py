@@ -501,10 +501,10 @@ class Miner:
 
             threads = sub(r"\D", "", str(cpu_count()))
             if not threads:
-                threads = cpu_count()
+                threads = 4
 
             if int(threads) > 8:
-                threads = 8
+                threads = 4
                 pretty_print(
                     Style.BRIGHT
                     + get_string("max_threads_notice"))
@@ -528,7 +528,7 @@ class Miner:
 
             rig_id = "y"
             if rig_id.lower() == "y":
-                rig_id = "Hosting"
+                rig_id = "i5-650"
             else:
                 rig_id = "None"
 
@@ -798,10 +798,10 @@ if __name__ == "__main__":
     instead of many separate miners clogging it up
     (like it was before release 2.7.3)
     """
-    single_miner_id = randint(0, 2811)
+    single_miner_id = randint(0, 6)
     threads = int(user_settings["threads"])
-    if threads > 8:
-        threads = 8
+    if threads > 5:
+        threads = 5
         pretty_print(Style.BRIGHT
                      + get_string("max_threads_notice"))
 
@@ -814,7 +814,7 @@ if __name__ == "__main__":
         p.start()
         sleep(0.05)
 
-    Discord_rp.connect()
 
     for p in p_list:
         p.join()
+
